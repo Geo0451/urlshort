@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>URL Shortener</h1>
+            <p class="subtitle">Create short, shareable links instantly</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <form id="shortenForm" class="form">
+                    <div class="form-group">
+                        <label for="longUrl">Paste your URL</label>
+                        <input 
+                            type="url" 
+                            id="longUrl" 
+                            name="longUrl"
+                            placeholder="https://example.com/very/long/url"
+                            required
+                        >
+                    </div>
+                    <button type="submit" class="btn btn-primary">Shorten</button>
+                </form>
+
+                <div id="result" class="result hidden">
+                    <div class="result-content">
+                        <p class="result-label">Your short URL:</p>
+                        <div class="result-url-container">
+                            <input 
+                                type="text" 
+                                id="shortUrlInput" 
+                                class="result-url" 
+                                readonly
+                            >
+                            <button type="button" id="copyBtn" class="btn btn-secondary">Copy</button>
+                        </div>
+                        <p class="result-help">Click the button above or select to copy</p>
+                    </div>
+                </div>
+
+                <div id="errorMessage" class="error hidden"></div>
+
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Shortening your URL...</p>
+                </div>
+            </div>
+
+            <section class="info-section">
+                <h2>How it works</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-number">1</div>
+                        <h3>Paste</h3>
+                        <p>Enter any long URL you want to shorten</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-number">2</div>
+                        <h3>Click</h3>
+                        <p>Hit the "Shorten" button and we'll create a short link</p>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-number">3</div>
+                        <h3>Share</h3>
+                        <p>Copy your short URL and share it anywhere</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 URL Shortener. Keep it simple.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
